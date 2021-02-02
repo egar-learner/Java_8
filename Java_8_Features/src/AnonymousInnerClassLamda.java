@@ -12,6 +12,12 @@
 //  ... Compulsorily the should only have one abstract method . ONLY THEN IT CAN BE CONVERTED TO LAMDA EXPRESSION
 //}
 
+//1. AnonymousInner Class can extend a normal class
+//2. AnonymousInner Class can extend an abstract class
+//3. AnonymousInner Class can implement an interface which contains any number of abstract methods
+
+//Basically AnonymousInner Class have more power than the regular Lambda Expression as Lambda expressions can only extend FI
+
 class AnonymousInnerCLassLamda {
                                             
     public static void main(String[] args) {
