@@ -19,17 +19,17 @@ class Employee {
 class LamdaAsParameter {
 
     public static void main(String[] args){
-        EmployeeClassPredicate e = new EmployeeClassPredicate(123124, "EmpName");
+        Employee e = new Employee(123124, "EmpName");
         //Without the implementation of toString method this will return the object reference in the memory
         System.out.println(e.toString());
 
 
-        ArrayList<EmployeeClassPredicate> l = new ArrayList<>();
-        l.add(new EmployeeClassPredicate(1232, "First"));
-        l.add(new EmployeeClassPredicate(3454, "Third"));
-        l.add(new EmployeeClassPredicate(5342, "Fifth"));
-        l.add(new EmployeeClassPredicate(2323, "Second"));
-        l.add(new EmployeeClassPredicate(4232, "Fourth"));
+        ArrayList<Employee> l = new ArrayList<>();
+        l.add(new Employee(1232, "First"));
+        l.add(new Employee(3454, "Third"));
+        l.add(new Employee(5342, "Fifth"));
+        l.add(new Employee(2323, "Second"));
+        l.add(new Employee(4232, "Fourth"));
 
         System.out.println(l);
 
