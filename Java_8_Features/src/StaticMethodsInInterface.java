@@ -4,7 +4,7 @@
 
 
 interface Interf{
-    public static void method(){
+    public default void method(){
         System.out.println("This is a static method inside interface");
     }
 }

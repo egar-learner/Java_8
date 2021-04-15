@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collector;
@@ -14,6 +18,65 @@ import java.util.stream.Stream;
 public class StreamsFilter {
 
     public static void main(String[] args){
+
+        /**List<Integer> chaos = valueIndex.entrySet().stream().map(m->
+        {
+            if(m.getKey()>m.getValue())
+                return m.getKey()-m.getValue();
+            else
+                return 0;
+        }).collect(Collectors.toList());
+        
+    int chaosVal = chaos.stream().mapToInt(
+        m->{
+            if(m.intValue()<3) 
+                return m.intValue();
+            else
+                return -9999;
+            }).sum();
+    
+    if(chaosVal > 0)
+        System.out.println(chaosVal);
+    else
+        System.out.println("Too chaotic");**/
+
+
+
+        /**
+        int count = 0;
+        int localCount = 0;
+        for(int i=q.length;i>0;){
+            int max = i--;
+            for(int j=i;j>=0;j--){
+                //System.out.println("localCount = "+localCount);
+                //System.out.println("count = "+count);
+                //System.out.println("q[j] = "+q[j] + " max = "+max);
+                if(q[j]!=max){
+                    count++;
+                    localCount++;
+                } else if(localCount>2){
+                    break;
+                } else if(q[j]==max && j != i) {
+                    //Swapping to sort from end
+                    int temp = q[j];
+                    q[j] = q[i];
+                    q[i] = temp;
+                    break;
+                } else {
+                    break;
+                }
+            }  
+            
+            if(localCount>2){
+                System.out.println("Too chaotic");
+                break;
+            } else {
+                localCount = 0;
+            }    
+        }
+        
+        if(localCount<=2)
+            System.out.println(count-1); */
 
         List<Integer> marks = new ArrayList<>();
         marks.add(5);
